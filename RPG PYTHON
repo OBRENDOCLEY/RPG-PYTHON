@@ -1,0 +1,253 @@
+import time
+import sys
+
+def escrever_rpg(texto):
+    for letra in texto:
+        sys.stdout.write(letra)
+        sys.stdout.flush()
+        time.sleep(0.04)
+
+texto = 'Seja bem vindo(a) a nossa aventura no RPG,esse trabalho foi desenvolvido roteirizado e produzido por Brendo Cleyson,João Lira,Juliana Campos,Luma Andrade e Anderson Sencler para a primeira avaliação de colding\n estaremos entrando em uma aventura espacial onde o nosso personagem tentara escapar depois de ser capturado por uma raça alienígena de jacarés humanoides e também tentaremos ajudar outros prisioneiros a escapar,\n mas antes vamos nos preparar para a aventura.'
+
+escrever_rpg(texto)
+
+class MontarPersonagem:
+    def __init__(self):
+        self.escolher_personagem()
+
+    def escolher_personagem(self): 
+        print("Escolha apenas uma opção:")
+        print("1. Opção Guerreiro")
+        print("2. Opção Hacker")
+        print("3. Opção Ladrão")
+        print("4. Opção civil")
+
+        escolha = input("Digite o número da opção desejada:")
+
+        if escolha == "1":
+            print("Você escolheu a opção 1 o Guerreiro:")
+            self.iniciar_guerreiro()
+        elif escolha == "2":
+            print("Você escolheu a opção 2 o Hacker:")
+            self.iniciar_mago()
+        elif escolha == "3":
+            print("Você escolheu a opção 3 o Ladrão:")
+            self.iniciar_ladrao()
+        elif escolha == "4":
+            print("Você escolheu a opção 4 o civil:")
+            self.iniciar_bardo()
+        else:
+            print("Por favor, escolha uma opção válida.")
+
+    def iniciar_guerreiro(self):
+        escrever_rpg(" Aqui começa a sua jornada guerreiro.....")
+
+    def iniciar_mago(self):
+        escrever_rpg(" Aqui começa a sua jornada hacker.....")
+
+    def iniciar_ladrao(self):
+        escrever_rpg(" Aqui começa a sua jornada ladrão.....")
+
+    def iniciar_bardo(self):
+        escrever_rpg("Aqui começa a sua jornada civil.....")
+
+personagem = MontarPersonagem()
+
+escrever_rpg("Bem vindo a primeira parte da nossa aventura, sem mais delongas vamos começar,\n Nossa história se inicia acordando em uma sala escura, porém logo percebemos que temos um pouco de luz mas essa mesma é escura,\n tentamos nos mexer com dificuldade e retirar algo do nosso bolso para nos ajudar,e em seguida tiramos do bolso")
+
+print("Opções disponíveis:")
+print("1. Lanterna")
+print("2. Canivete")
+print("3. Lixa")
+print("4. Esqueiro")
+
+escolha = input("Digite um número de sua escolha : ")
+
+if escolha == "1":
+    print("Você escolheu a opção 1: Lanterna,. ")
+    print("Era isso que precisávamos")
+elif escolha == "2":
+    print("Você escolheu a opção 2: Canivete é Bom mas não agora.")
+    print(" O jogo acabou.")
+    sys.exit()
+elif escolha == "3":
+    print("Você escolheu a opção 3: Com a lixa você não consegue enxergar nada.")
+    print(" O jogo acabou .")
+    sys.exit()  # Esse comando encerra o programa após a escolha da opção
+elif escolha == "4":
+    print("Você escolheu a opção 4: Esqueiro, é bom mas dura pouco e queima as pontas dos dedos.")
+    print(" O jogo acabou.")
+    sys.exit()
+else:
+    print("Por favor, escolha uma opção válida.")
+
+
+escrever_rpg("Tiramos do bolso a lanterna para iluminar o nosso caminho\n,porém nos deparamos que estamos em uma cela toda feita de metal\n,olhamos em volta e obviamente temos uma grade que nos empata de sair, para piorar a nossa situação constantemente uma ronda de guardas \n que são jacarés humanoides com lanças de metal nas mãos passam de vigia para verificar se estamos no local.\n Decidimos olhar ao nosso redor para ver o que temos ou podemos usar em nosso favor, e nos deparamos apenas com um duto de ar.2 ") 
+
+print("Opções disponíveis:")
+print("1.Retira a tampa o mais rápido possível escapar pelo duto")
+print("2.Deixar como está e esperar outra solução")
+
+escolha = input("Digite o numero de sua escolha:")
+
+if escolha == "1":
+    print("Você escolheu a opção 1: Retira a tampa")
+elif escolha == "2":
+    print("Você escolheu a opção 2: Deixar como está e esperar outra solução")
+    print("Deixamos como está e fomos devorados depois de um tempo pelos guarda,fim de jogo,Obrigado por jogar.")
+    sys.exit()
+
+escrever_rpg("Entramos no duto e seguimos por um determinado ponto onde nos deparamos com uma bifurcação,\n pela direita o túnel fica inclinado e se torna um escorregador, e pela esquerda temos o mesmo caminho que estávamos percorrendo,\n porém sem iluminação nenhuma.")
+
+print("Opções disponíveis:")
+print("Pela direita")
+print("Pela esquerda")
+
+escolha = input("Digite o caminho desejado :")
+
+if escolha == "direita":
+    print("Seguimos pela direita escorregamos e chegamos o segundo andar da área das celas onde tem mais prisioneiros.")
+elif escolha == "esquerda":
+    print("Caímos no compactador de lixo e somos esmagados e é fim de jogo.........Obrigado por jogar")
+    sys.exit()
+
+escrever_rpg(" No segundo andar encontramos mais prisioneiro onde nos misturamos \n e conversamos para conseguir informações de onde estamos,\nfalando com os prisioneiros chegamos até um que se chamava Xavier,\no mesmo nos conta que só pode nos dar uma informação: ")    
+
+print("Opções disponíveis:")
+print("1: Onde estamos?")
+print("2: Ha quanto tempo ele está aqui?")
+print("3: Se ele gostaria de se juntar a nós para escapar?")
+print("4: Sabe se alguém já conseguiu escapar?")
+print("5: Tem como escapar daqui?")
+
+escolha = input("Digite a pergunta desejada :")
+
+if escolha == "Onde estamos?":
+    print("Resposta Xavier: Estamos na nave dos lizards ,uma raça maligna que só vive para comer e fazer guerra.")
+elif escolha == "Ha quanto tempo você está aqui?": 
+    print("Resposta Xavier: Infelizmente já parei de contar os dias a muitos anos.") 
+elif escolha == "Vamos nos juntar para escapar?": 
+    print("Resposta Xavier: Não tenho mais esperança.")
+elif escolha == "Sabe se alguém já conseguiu escapar?":
+    print("Resposta Xavier: Nos anos que permanecia aqui ninguém conseguiu escapar.")
+elif escolha == "Tem como escapar daqui?":
+    print("Resposta: Sim, pelos elevadores no último andar temos módulos de fuga, porém o caminho para chegar lá é muito perigoso.")
+
+escrever_rpg("Seguindo nosso rumo e continuamos, percebemos que temos muitos prisioneiros e um número relativamente pequeno de guardas: ")
+
+print("Opções disponíveis:")
+print("1: Causamos uma briga para distrair um guarda e escapar por uma porta que ficou sem ninguém olhando na confusão.")
+print("2: Brigamos diretamente com os guardas (Acabamos sendo presos e devorados e perdemos, fim de jogo.")
+
+escolha = input("Digite a ação necessária:")
+
+if escolha == "Causamos uma briga":
+    print("Conseguimos distrair o guarda e escapar")
+elif escolha == "Brigamos diretamente com os guardas":   
+    print("Acabamos sendo presos e devorados e perdemos, fim de jogo.")
+    sys.exit()
+
+escrever_rpg("Escapando do andar das celas descemos a escada até um elevador com um botão apenas para baixo,\n chegando ao destino em um andar mais calmo, porém ainda perigoso, \n e logo percebemos que estamos no arsenal dos inimigos, lá reparamos que a muitos equipamentos e recursos que podemos usar \n , porém não temos muito tempo porque guardas aparecem e temos que escapar,procuramos um lugar para nos esconder e temos duas opções: ")
+
+print("Opções disponíveis:")
+print("1: Nos escondemos em uma caixa com furos para podemos enxergar.")
+print("2: Nos escondemos atras de uma prateleira com caixas enfileiradas.")
+
+escolha = input("Digite a ação necessária:")
+
+if escolha == "Nos escondemos em uma caixa com furos":
+    print(" conseguimos nos esconder dos guardas")
+elif escolha == "Nos escondemos atras de uma prateleira":
+    print("conseguimos nos esconder dos guardas")
+
+escrever_rpg("Depois que os guarda passam conseguimos simos do esconderijo pegar procurar equipamentos e decidimos escolher entre 2: ")
+
+escolha = input("Digite o item escolido:")
+
+if escolha == "Sabre de luz:":
+    print("Boa escolha")
+elif escolha == "Granada elétrica:":
+    print("Bem útil")
+
+escrever_rpg("Depois de escolhermos o equipamento saímos do arsenal e seguimos ao próximo andar. ")
+
+escrever_rpg("Nesse andar, nos deparamos com uma série de corredores estreitos e mal iluminados.\n A tensão no ar é tensa, pois sabemos que a qualquer momento podemos ser descobertos pelos guardas.\n Decidimos seguir em frente, mantendo-nos atentos a qualquer sinal de perigo.")
+
+escrever_rpg("À medida que avançamos pelos corredores, ouvimos vozes mais como grunhidos vindos dos corredores e passos ecoando pelo ambiente.\n Seguimos em frente rapidamente quando vemos um grupo de guardas passando, mas felizmente eles não nos notam e continuam seu caminho, ao chegar a uma interseção, temos que escolher entre dois caminhos,\n o primeiro à esquerda parece menos movimentado, mas está escuro e desconhecido,n\ o segundo  à direita está mais iluminado, sugerindo atividade, mas também pode significar mais perigo iminente.  ")  
+print("Escolhemos o corredor da :")
+print("Optamos pelo corredor à esquerda, buscando evitar confrontos diretos com os guardas, como temos a lanterna se torna um pouco menos perigoso.  ")
+print("Decidimos seguir pelo corredor à direita, preparados para enfrentar qualquer desafio que possa surgir em nosso caminho.")
+
+escolha = input("Digite qual lado : ")
+
+if escolha == "Esquerda":
+   print("Optamos pelo corredor à esquerda, buscando evitar confrontos diretos com os guardas, como temos a lanterna se torna um pouco menos perigoso.")
+elif escolha == "Direita":
+   print("Decidimos seguir pelo corredor à direita, preparados para enfrentar qualquer desafio que possa surgir em nosso caminho, nos deparamos com um batalhão de guardas e nos perdemos, fim de jogo.")
+   sys.exit()
+
+escrever_rpg("Após fazer a escolha, seguimos em frente, mantendo-nos atentos para qualquer coisa que possa surgir em nosso percurso. \n O destino dos módulos de fuga está cada vez mais próximo, mas o caminho para chegar lá está repleto de obstáculos e perigos desconhecidos. \n Estamos determinados a sobreviver e escapar deste lugar sombrio a todo custo. ")
+
+escrever_rpg(" Avançamos pelo corredor escolhido, e logo nos deparamos com uma porta de aço maciça com circuitos eletrônicos para abrir. \n Não há sinal de guarda por perto, então tentamos abri-la. Infelizmente, está trancada,\n então decidimos abri-la e temos duas formas para isso")
+
+print("Escolhemos:")
+print("1: Tentamos forçar a porta com nossos equipamentos, com o sabre de luz para derreter a porta.")
+print("2: Tentamos forçar a porta com nossos equipamentos, jogando a granada elétrica nos circuitos.")
+
+escolha = input("Digite a opção escolhida:")
+
+if escolha == "1":
+   print("1: Tentamos atravessar o corredor inundado diminuindo o nível de Água, enfrentando possíveis perigos submersos,água contaminada e você acabou morrendo,fim de jogo obrigado por jogar.")
+   sys.exit()
+elif escolha == "2":
+   print("2: Optamos pela ponte improvisada, mesmo que pareça frágil") 
+
+escrever_rpg("Ao atravessarmos a ponte, chegamos a uma sala iluminada por uma luz azul suave. \n No centro da sala, há uma mesa com uma tela holográfica e alguns consoles de controle com cadeiras ao redor.\n Parece ser uma área de controle ou monitoramento onde temos uma visão de toda a nave, e nesse momento descobrimos onde estão os módulos de fuga e temos o controle de uma parte da nave, então decidimos: ")
+
+print("Opções disponíveis:")
+print("1: Interagir com a tela holográfica para obter informações sobre a localização dos módulos de fuga e escapar sozinhos.")
+print("2: liberamos o comando de abrir a porta de todas as celas para libertar os prisioneiros e criar distrações e conseguir informações do modulo de fuga.")
+
+escolha = input("Digite qual opção escolher :")
+
+if escolha == "1":
+    print("1.Temos a informação, mas ao tentarmos somos capturados e devorados.")
+    sys.exit()
+elif escolha == "2":
+    print("Criamos uma rebelião a nosso favor")
+
+escrever_rpg("Depois de criar a distração agora pelas escadas sabendo onde e como chegar aos botes salva vidas,\n seguimos pelo corredor inferior ao local onde estávamos e chegamos novamente ao pátio dos prisioneiros,\n com rapidez nos esquivamos e tenacidade corremos o mais rápido possível para o caminho do deck do nosso objetivo.")
+
+escrever_rpg("Depois de todos esses desafios finalmente chegamos ao nosso objetivo os módulos de fuga,\n porém não seria tão fácil como estávamos imaginando,  um último desafio nos esperava um guarda estava entre o modulo e você e esta é a sua última chance de escapar\na batalha se inicia e logo de cara já estamos na desvantagem porque nosso oponente nos agarra e nos joga longe,\n mas não desistimos e lutamos, porém ele nos pega e nos segura pelo pescoço tentando nos sufocar e nesse momento :")
+
+print("Opções disponíveis:")
+print("1: Pegamos o sabre de luz e damos um golpe de sorte certeiro no braço do lagarto.")
+print("2: Pegamos a granada e jogamos na boca dele causando uma explosão.")
+
+escolha = input("Digite qual opção escolher :")
+
+if escolha == "1":
+    print("depois com mais sorte ainda conseguimos acertar ele no meio o derrotando de vez")
+elif escolha == "2":
+    print(" Infelizmente com isso causamos a nossa própria morte com a granada explodindo na nossa cara também")
+    sys.exit()
+
+escrever_rpg("Finalmente conseguimos, entramos no modulo de fuga vamos para o assento e finalmente escapamos, no caminho nos resta apenas: ")
+
+print("Opções disponíveis:")
+
+print("1: Olhar pela janela e aproveitar a vista.")
+print("2: Escolher recomeçar a vida em um destino diferente de antes no qual estávamos.")
+print("3: Voltar e ajudar os outros prisioneiros a escapar")
+
+escolha == input("Digite qual opção escolher:")
+
+if escolha == "1":
+    print("Obrigado por jogar")
+    sys.exit()
+elif escolha == "2":
+    print("Obrigado por jogar")
+    sys.exit()
+elif escolha == "3":
+    print("Obrigado por jogar")
+    sys.exit()
